@@ -1,0 +1,45 @@
+.ReviewSubSection{
+    /*border: 2px solid black;*/
+    margin: 5px;
+}
+
+.ReviewSubsectionEntry{
+    /*border: 2px solid black;*/
+    margin: 5px;
+}
+
+.ReviewSectionDividerAsset{
+    /*border: 2px solid black;*/
+    width: calc(100% + 15px);
+    margin-left: -10px;
+}
+
+.ReviewSectionEntryTitle{
+    /*border: 2px solid black;*/
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 13px;
+}
+.ReviewSectionEntryBody{
+    /*border: 2px solid black;*/
+    width: calc(100% - 50px);
+    margin-left: 13px;
+    font-size: 17px;
+}
+
+@media screen and (max-width:  415px){
+    .ReviewSubSection{
+        display: block;
+    }
+
+    /* .ReviewImage{
+        display: block;
+    }*/
+    /*.ReviewParticle{
+        display: block;
+    }*/
+    .ReviewParticleImage{
+        display: none;
+    }
+}

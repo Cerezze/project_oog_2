@@ -1,0 +1,33 @@
+html{
+    /*height: 900px;*/
+    /*border: 2px solid black;*/
+    /*margin: 5px;*/
+    margin: 0;
+}
+
+body{
+    /*height: 885px;
+    border: 2px solid black;
+    margin: 5px;*/
+    margin: 0;
+}
+
+.MainDiv{
+    overflow-y: auto;
+    height: 100vh;
+}
+
+
+@media screen and (max-width: 415px){
+    html{
+        height: 680px;
+        border: 2px solid black;
+        margin: 5px;
+    }
+    
+    body{
+        height: 665px;
+        border: 2px solid black;
+        margin: 5px;
+    }
+} 

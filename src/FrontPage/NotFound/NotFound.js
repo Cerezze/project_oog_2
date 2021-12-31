@@ -1,0 +1,1 @@
+//To create a proper NOT FOUND 404 page

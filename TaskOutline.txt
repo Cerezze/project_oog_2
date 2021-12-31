@@ -1,0 +1,5 @@
+- understand memo and then understand callback and use reducer to 
+understand the code use-http and api. Do this by starting a new
+test project.
+
+- Formulate a way to implement these functions into your own project.

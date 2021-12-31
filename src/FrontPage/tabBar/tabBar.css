@@ -1,0 +1,31 @@
+.tabBar{
+    /*border: 2px solid black;*/
+    margin: 5px;
+    height: 75px;
+    display: flex;
+}
+
+.title{
+    /*border: 2px solid black;*/
+    flex: 1;
+    width: 40px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+/*@media screen and (max-width: 1000px){
+    .tabBar{
+        border: 2px solid black;
+        margin: 5px;
+        height: 60px;
+    }
+}*/
+
+@media screen and (max-width:  415px){
+    .tabBar{
+        border: 2px solid black;
+        margin: 5px;
+        height: 37px;
+    }
+} 

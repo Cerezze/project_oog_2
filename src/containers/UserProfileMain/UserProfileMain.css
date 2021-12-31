@@ -1,0 +1,27 @@
+.ProfileSection{
+    margin-top: 175px;
+    position: absolute;
+    width: 500px;
+    margin-left: 150px;
+    cursor: pointer;
+}
+
+.ProfileSection h6:hover{
+    color: red;
+}
+
+.ProfileSection input{
+    border: 2px solid black;
+    margin-left: 13px;
+}
+
+.submitChanges{
+    background-color: red;
+    display: block;
+    border: 0;
+    margin-top: 40px;
+    color: white;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+}

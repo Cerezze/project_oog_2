@@ -1,0 +1,92 @@
+.HEADER{
+    /*border: 2px solid black;*/
+    /*margin: 5px;*/
+    /*all children will flex */
+    display: flex;
+    flex-wrap: nowrap;
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../../Designs_and_Flow/basic_designs/header_background.png);
+    position: fixed;
+    width: calc(100% - 16px);
+    z-index: 1;
+    transition-duration: 0.3s;
+}
+
+.headerLeftPanel{
+   /*border: 2px solid black;*/
+    height: 160px;
+    flex-grow: 3;
+    /*float: left;*/
+    display: flex;
+}
+
+.leftAlignHeader{
+    /*border: 2px solid black;*/
+    flex-grow: 0.1;
+}
+
+.Logo{
+    /*border: 2px solid black;*/
+    flex-grow: 0.1;
+    margin-top: 17px;
+}
+
+.HeaderText{
+    /*border: 2px solid black;*/
+    margin-top: 33px;
+    color: white;
+    font-size: 20px;
+    flex-grow: 2;
+}
+
+.headerRightPanel{
+    /*border: 2px solid black;*/
+    height: 160px;
+    /*margin: 5px;*/
+    /* this item shall fill remaining space*/
+    flex-grow: 1;
+}
+
+/*@media screen and (max-width: 1000px){
+    .HEADER{
+        /*border: 2px solid black;
+        height: 145px;
+        /*all children will flex 
+    }
+    
+    .headerLeftPanel{
+        /*border: 2px solid black;
+        height: 130px;
+        /*float: left;
+    }
+    
+    .headerRightPanel{
+        /*border: 2px solid black;
+        height: 130px;
+        /* this item shall fill remaining space 
+    }
+}*/
+
+@media screen and (max-width: 415px){
+    .HEADER{
+        border: 2px solid black;
+        height: 100px;
+        /*all children will flex */
+        display: block;
+    }
+    
+    .headerLeftPanel{
+        border: 2px solid black;
+        height: 85px;
+        /*float: left;*/
+        display: none;
+    }
+    
+    .headerRightPanel{
+        border: 2px solid black;
+        height: 85px;
+        /* this item shall fill remaining space */
+    }
+} 

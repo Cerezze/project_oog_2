@@ -1,0 +1,14 @@
+.MAINPAGE{
+    /*border: 2px solid black;*/
+    /*margin: 5px;*/
+    margin: 0;
+}
+
+
+
+@media screen and (max-width:  415px){
+    .MAINPAGE{
+        border: 2px solid black;
+        height: 655px;
+    }
+}

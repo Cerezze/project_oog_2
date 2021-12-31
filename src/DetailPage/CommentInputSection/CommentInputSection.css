@@ -1,0 +1,65 @@
+/*.CommentInputSection{
+
+}
+
+.CommentSectionTitle{
+}*/
+
+.CommentSectionText{
+    
+    margin: 25px;
+}
+
+.CommentSectionDivider{
+    width: 100%;
+}
+
+.CommentBox{
+    width: 1070px;
+    margin: auto;
+}
+
+.CommentBoxInput{
+   margin-top: 25px;
+   color: white;
+   font-size: 20px;
+   padding: 20px;
+   font-family: 'Times New Roman', Times, serif;
+    width: calc(100% - 50px);
+    resize: none;
+    background-color: lightgrey;
+    height: 125px;
+    border-color: lightgrey;
+}
+
+.CommentBoxInput::placeholder{
+    color: white;
+}
+
+.CommentBoxInput:focus::placeholder{
+    color: transparent;
+}
+
+.SubmitArea{
+    border-bottom: 2px solid black;
+    height: 45px;
+    width: 95%;
+    margin-left: 40px;
+    width: 1000px;
+}
+
+.SubmitButton{
+    border: 2px solid red;
+    background-color: red;
+    margin-bottom: 5px;
+    color: white;
+    padding: 9px;
+    float: right;
+    cursor: pointer;
+}
+
+@media screen and (max-width:  415px){
+    .CommentInputSection{
+        display: none;
+    }
+}

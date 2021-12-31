@@ -1,0 +1,29 @@
+.OverallScore{
+    text-align: justify;
+    height: 200px;
+    background-size: 1200px;
+    background-repeat: no-repeat;
+    background-image: url(../../Designs_and_Flow/basic_designs/OverallScore.png);
+    background-position: center;
+}
+
+.OverallScoreText{
+    margin-top: 25px;
+    width: 700px;
+    margin-left: 215px;
+    padding-top: 30px;
+}
+
+.OverallScoreBlurb{
+    color: white;
+    font-size: 19px;
+    margin-right: 50px;
+}
+
+.OverallScoreRating{
+    float: right;
+    margin-top: -140px;
+    margin-right: -120px;
+    font-size: 100px;
+    color: white;
+}

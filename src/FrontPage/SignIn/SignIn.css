@@ -1,0 +1,47 @@
+.signIn{
+    /*border: 2px solid black;*/
+    height: 75px;
+    margin: 5px;
+    /* /text-align: center; */
+    display: flex;
+}
+
+.leftAlign{
+    flex-grow: 2;
+}
+
+.signInCont{
+    /*border: 2px solid black;
+    display: inline-block;
+    margin: 0 auto;*/
+    flex-grow: 0.3;
+}
+.accLog{
+    /*border: 2px solid black;*/
+    float: left;
+}
+
+.signInText{
+    /*border: 2px solid black;*/
+    top: 13px;
+    font-size: 20px; 
+    position: relative;
+    font-weight: bold;
+}
+
+
+
+@media screen and (max-width: 1000px){
+.signIn{
+        /*border: 2px solid black;*/
+        height: 55px;
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width:  415px){
+    .signIn{
+            border: 2px solid black;
+            height: 32px;
+        }
+    }

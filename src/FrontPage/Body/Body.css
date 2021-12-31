@@ -1,0 +1,121 @@
+.flexBody{
+    /*border: 2px solid black;*/
+    height: 670px;
+    /*margin: 5px;*/
+    display: flex;
+    
+}
+
+.bodyLeftPanel{
+    /*border: 2px solid black;*/
+    height: 655px;
+    margin-top: 270px;
+    flex-grow: 1;
+    /*float: left;*/
+    position:relative; 
+    overflow:hidden;
+}
+
+.sortPanel{
+    /*border: 2px solid black;*/
+    float:left;
+    background-repeat: no-repeat;
+    background-size: 150px 165px; 
+    width: 150px;
+    height: 165px;
+    /*transition-property: background-size;*/
+    transition-duration: 0.3s;
+    position: fixed;
+    cursor: pointer;
+}
+
+.sortPanel:hover{
+    background-size: 153px 168px; 
+    height: 168px;
+    width: 153px;
+}
+
+.sortBy{
+    color: white;
+    margin-left: 25px;
+    margin-top: 10px;
+    width: 75px;
+    font-weight: bold;
+    /*border: 2px solid black;*/
+}
+
+.sortByList{
+    /*border: 2px solid black;*/
+    width: 77px;
+}
+
+.clickDiv{
+    /*border: 2px solid black;*/
+    width: 25px;
+    margin-top: -200px;
+    height: 200px;
+    float: right;
+}
+
+.sortByList li{
+    border-bottom: 1px solid black;
+    list-style: none;
+    width: 100px;
+    margin-top: 23px;
+    margin-left: -25px;
+    font-size: 17px;
+    font-weight: bold;
+    /*border: 2px solid black;*/
+}
+
+.sortByList li:hover{
+    font-size: 18px;
+}
+
+.bodyMiddlePanel{
+    /*border: 2px solid black;*/
+    height: 655px;
+    margin-top: 180px;
+    flex-grow: 3;
+    /*float: left;*/
+}
+
+.tabTitle{
+    margin-left: 13px;
+}
+
+.bodyRightPanel{
+    /*border: 2px solid black;*/
+    height: 655px;
+    /* this item shall fill remaining space */
+    flex-grow: 1;
+}
+
+@media screen and (max-width: 415px){
+    .flexBody{
+        border: 2px solid black;
+        height: 535px;
+    }
+    .bodyRightPanel{
+        display: none;
+    }
+    .bodyLeftPanel{
+        display: none;
+    }
+
+    .bodyMiddlePanel{
+        border: 2px solid black;
+        height: 520px;
+        margin: 5px;
+        flex-grow: 3;
+        /*float: left;*/
+    }
+
+    .bodyBottomPanel{
+        border: 2px solid black;
+        height: 60px;
+        margin-top: -83px;
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+} 
