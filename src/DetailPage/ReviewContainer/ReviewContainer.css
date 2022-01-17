@@ -1,15 +1,12 @@
 .ReviewContainer{
-    /*border: 2px solid black;*/
     width: 800px;
     margin: auto;
 }
 .ReviewContainerTitle{
-    /*border: 2px solid black;*/
     font-weight: bold;
     margin: 0px;
     Font-size: 23px;
 }
 .ReviewSection{
-    /*border: 2px solid black;*/
     margin: 5px;
 }

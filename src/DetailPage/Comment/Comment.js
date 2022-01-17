@@ -20,9 +20,6 @@ const Comment = (props) => {
             <div className = "CommentText">
                 {props.comment.text}
             </div>
-            {/*<div className = "UserScore">
-                User Score: 12/100
-            </div>*/}
         </div>
     );
 }

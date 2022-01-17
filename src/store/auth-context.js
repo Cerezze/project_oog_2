@@ -11,13 +11,9 @@ const AuthContext = React.createContext({
 });
 
 const calculateRemainingTime = (expirationTime) => {
-    //console.log(expirationTime);
     const currentTime = new Date().getTime();
     const adjExpirationTime = new Date(expirationTime).getTime();
-    //console.log(currentTime);
-    //console.log(adjExpirationTime);
     const remainingDuration = adjExpirationTime - currentTime;
-    //console.log(remainingDuration);
     return remainingDuration;
 };
 
@@ -58,7 +54,6 @@ export const AuthContextProvider = (props) => {
     const userIsLoggedIn = !!token;
 
    const logoutHandler =  useCallback( () =>{
-        //console.log("CALLED");
         setToken(null);
         setEmail('');
         localStorage.removeItem('token');
@@ -78,15 +73,12 @@ export const AuthContextProvider = (props) => {
         localStorage.setItem('email', userName);
         localStorage.setItem('expirationTime', expirationTime);
 
-        //console.log(expirationTime);
         const remainingTime = calculateRemainingTime(expirationTime);
-        //console.log(remainingTime);
         logoutTimer = setTimeout(logoutHandler, remainingTime);
     };
 
     useEffect(() => {
         if (tokenData){
-            //console.log(tokenData.duration);
             logoutTimer = setTimeout(logoutHandler, tokenData.duration);
         }
     }, [tokenData, logoutHandler]);

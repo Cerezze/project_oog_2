@@ -10,7 +10,6 @@ const CommentInputSection = (props) => {
     const enterCommentHandler = (event) =>{
         event.preventDefault();
 
-        //console.log(event.target.value);
         setValue(event.target.value);
     };
 

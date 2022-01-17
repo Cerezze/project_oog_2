@@ -1,15 +1,11 @@
 .search{
-    /*border: 2px solid black;*/
-    /*height: 10px;*/
     margin: 5px;
-    /*min-height: 200px;*/
     position: relative;
     z-index: 1;
     overflow: hidden;
 }
 
 .SearchLog{
-  /*border: 2px solid black;*/
     float: left;
 }
 
@@ -24,7 +20,6 @@ input{
     position: relative;
     top: 12px;
     left: -14px;
-    /*border: 2px solid black;*/
 }
 
 ::placeholder{
@@ -37,17 +32,12 @@ input:focus{
 }
 
 .searchList{
-    /*border: 2px solid black;*/
     background-color: black;
     height: 147px;
     width: 206px;
-    /*background-image: url(../../Designs_and_Flow/basic_designs/search_Tab.png);*/
-    /*background-size: 400px 200px;
-    background-repeat: no-repeat;*/
 }
 
 .searchListEle{
-    /*border: 2px solid black;*/
     list-style: none;
     border-bottom: 1px solid white;
     margin: 10px;
@@ -62,7 +52,6 @@ input:focus{
 
 @media screen and (max-width: 1000px){
 .search{
-        /*border: 2px solid black;*/
         height: 52px;
         margin: 5px;
     }

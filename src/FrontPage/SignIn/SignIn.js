@@ -16,7 +16,6 @@ const SignIn = (props) =>{
 
     return(
     <div className="signIn">
-        {/* may need to put both the text and logo in same div*/}
         <div className = "leftAlign">
         </div>
         <div className = "signInCont">
@@ -25,7 +24,7 @@ const SignIn = (props) =>{
                             onClick = {logoutHandler}>Log Out</span>
                 </span>)}
             
-                {/*Add different logo when not logged in*/!isLoggedIn && (
+                {!isLoggedIn && (
                     <span className = "signInText">
                     <Link to = '/auth'>
                         <strong>Sign in</strong>

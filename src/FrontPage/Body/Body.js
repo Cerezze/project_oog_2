@@ -7,31 +7,17 @@ import closeSortTab from '../../Designs_and_Flow/basic_designs/close_Sort_Tab.pn
 
 import {useState, useEffect} from 'react';
 
-//work with objects to change multiple properties in setVisible
-
 const Body = (props) =>{
     const [isVisible, setIsVisible] = useState({
         size: -124,
         url: openSortTab
         });
-    //console.log(props.reviews);
 
     if(props.loading){
         return <h3>LOADING...</h3>
     }
 
-    /*let arr1 = [];
-
-    for(let i = 0; i < props.results.length; i++){
-        for(let j = 0; j < props.reviews.length; j++){
-            if(props.results[i] === props.reviews[j].Title){
-                arr1.push(props.reviews[j]);
-            }
-        }
-    }*/
-
     const handleClickVis = event => {
-        //console.log("clicked");
         if(isVisible.size == -10)
             setIsVisible({
                 size: -124,
@@ -43,8 +29,6 @@ const Body = (props) =>{
                 url: closeSortTab
             });
     };
-
-    //console.log(props.reviews);
 
     return(
     <div className="Body">
@@ -76,7 +60,6 @@ const Body = (props) =>{
                 <h1 className = "tabTitle">REVIEWS</h1>
                 <div className = "reviewCont">
                     {/*arr1.length === 0 ?*/ props.reviews.map((i,index) =>{
-                                    //console.log(i);
                                     return (
                                 <ReviewBody key = {i.Title}
                                             idx = {index}

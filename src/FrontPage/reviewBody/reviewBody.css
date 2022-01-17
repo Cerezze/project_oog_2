@@ -1,5 +1,4 @@
 .reviewBody{
-    /*border: 2px solid black;*/
     height: 275px;
     margin: 5px;
     /*all children will flex */
@@ -11,23 +10,11 @@
     transform: scale(1.03);
 }
 .reviewBodyLeftPanel{
-    /*border: 2px solid black;*/
     height: 260px;
     flex-grow: 1;
-    /*float: left;*/
-    /*display: flex;*/
 }
 
-/*.dynamicImage{
-    display: block;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    border: solid red 3px;
-}*/
-
 .leftReviewPanel{
-    /*border: 2px solid black;*/
     margin: 5px;
     flex-grow: 1;
     width: 60px;
@@ -43,7 +30,6 @@
 }
 
 .rightReviewPanel{
-    /*border: 2px solid black;*/
     margin: 5px;
     flex-grow: 1;
 }
@@ -56,7 +42,6 @@
 }
 
 .dateTime{
-    /*border: 2px solid black;*/
     flex-grow: 1;
     width: 0px;
     font-weight: bold;
@@ -64,7 +49,6 @@
 }
 
 .Icon{
-    /*border: 2px solid black;*/
     flex-grow: 1;
     width: 0px;
 }

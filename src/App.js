@@ -8,7 +8,6 @@ import AuthPage from './containers/LogInMain/LogInMain';
 import Profile from './containers/UserProfileMain/UserProfileMain';
 import AuthContext from './store/auth-context';
 import ScrollToTop from "./ScrollToTop/ScrollToTop";
-//IMPORT NOT FOUND LATER
 
 function App() {
   const prevScrollY = useRef(0);
@@ -24,39 +23,7 @@ function App() {
       setGoingUp(true);
     }
     prevScrollY.current = currentScrollY;
-    //console.log(goingUp, currentScrollY);
   };
-
-  // const [IsLoading, SetIsLoading] = useState(true);
-  // const [LoadedReviews, SetLoadedReviews] = useState([]);
-
-  //   useEffect(() => {
-  //     SetIsLoading(true);
-
-  //     fetch('https://ooglandish-default-rtdb.firebaseio.com/Reviews.json'
-  //     ).then(response => {
-  //         return response.json();
-  //     }).then(data =>{
-  //         //console.log(data);
-  //         const reviews = [];
-
-  //         for(const key in data){
-  //             const review = {
-  //                 id: key,
-  //                 ...data[key]
-  //             }
-
-  //             reviews.push(review);
-  //         };
-
-  //         //console.log(reviews);
-
-  //         //revese array so that the latest one I create is the first one.
-
-  //         SetIsLoading(false);
-  //         SetLoadedReviews(reviews.reverse());
-  //     }); 
-  // }, []);
 
   const authCtx = useContext(AuthContext);
 
@@ -67,7 +34,6 @@ function App() {
   useEffect(() => {
     const transformReviews = (reviewObj) => {
       const loadedReviews = [];
-      //console.log(reviewObj);
       for (const key in reviewObj) {
         const quoteObj = {
           id: key,
@@ -96,7 +62,6 @@ function App() {
                       isLoading = {IsLoading}
                       GoingUp = {goingUp}/>
         </Route>
-        {/*<Route path = '/detail-review/:reviewData+'>)*/}
         <Route path = '/detail-review/:reviewData'>
           <DetailPage loadedReviews = {reviews} 
                       isLoading = {IsLoading}
@@ -112,7 +77,6 @@ function App() {
           <Profile GoingUp = {goingUp}/>
         </Route> : <Redirect to = "/auth"/>}
         <Route path = "*">
-          {/*TO be style and modularized */}
           <p> Not Found!</p>
         </Route>
       </Switch>

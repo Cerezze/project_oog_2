@@ -1,0 +1,27 @@
+HELLO viewer!
+
+I intend to make this a full front and back end app project.
+What you will see for now is a fully functional app with functions
+for both content creators and users. However, there are many things 
+that I will do that I havent gotten around to yet. Nevertheless,
+I believe that this project is fully featured enough to show.
+
+Below I will list the things I intend to fix over time:
+
+- for the best experience currently please view at BROWSER WIDTH: 1217px.
+I am currently working on improving the look of this site on smaller screens.
+This is my current priority going forward.
+
+- The search box DOES NOT work with capital letters, nor does the black drop down
+adjust to the number of items in the list. I intend to fix this, but I think 
+what I have is currently useable so it is not a priority. (Again please use 
+lowercase letters for the search box).
+
+- If You are viewing the code, please note that I am aware that it is not optimized
+nor is it clean, commented (and somethimes not modularized enough). This is just a 
+front end portfolio piece for now so with it being functional, I will try my best to 
+improve upon the code as much as possible going forward. If you have any questions about
+the Code please do not hesitate to ask me via email: gm.c.burzo@gmail.com.
+
+** To run my project please see the README as it details how to get started with this
+REACT.JS project.

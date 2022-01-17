@@ -10,7 +10,6 @@ import {Link} from 'react-router-dom';
 const Header = (props) =>{
     const [HeaderisVisible, setHeaderIsVisible] = useState(0);
     const [HeaderOnclick, SetHeaderOnClick] = useState();
-    //console.log(props.GoingUp);
 
     useEffect(() => {
         if(props.GoingUp == true){
@@ -19,11 +18,6 @@ const Header = (props) =>{
             setHeaderIsVisible(-120);
         }
     }, [props.GoingUp]);
-
-    /*const headerOnclickHandler = () =>{
-        setHeaderIsVisible(0);
-    }*/
-    
     return(
     <div className="HEADER"
     style = {{

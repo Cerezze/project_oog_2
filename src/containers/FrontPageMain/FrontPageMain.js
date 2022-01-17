@@ -5,15 +5,9 @@ import Body from '../../FrontPage/Body/Body';
 import {useState, useEffect} from 'react';
 
     function FrontPage(props){
-
-        //const [isLoading, setIsLoading] = useState(true);
-        //const [loadedReviews, setLoadedReviews] = useState([]);
         const [searchTerm, setSearchTerm] = useState("");
         const [searchResults, setSearchResults] = useState([]);
-
-        //console.log(status);
-
-        //return i instead of i.Title
+        
         let num = 4;
           let arr = props.loadedReviews.map((i, index) =>{
                 num -= 1;
@@ -22,47 +16,14 @@ import {useState, useEffect} from 'react';
                   id: num
                 }
           })
-
-          //console.log(arr.title);
-    
-        // useEffect(() => {
-        //     setIsLoading(true);
-
-        //     fetch('https://ooglandish-default-rtdb.firebaseio.com/Reviews.json'
-        //     ).then(response => {
-        //         return response.json();
-        //     }).then(data =>{
-                
-        //         const reviews = [];
-    
-        //         for(const key in data){
-        //             const review = {
-        //                 id: key,
-        //                 ...data[key]
-        //             }
-    
-        //             reviews.push(review);
-        //         };
-    
-        //         //revese array so that the latest one I create is the first one.
-    
-        //         setIsLoading(false);
-        //         setLoadedReviews(reviews.reverse());
-        //     }); 
-        // }, []);
-        //console.log(props.setLoadedReviews);
     
         const handleChange = event => {
             setSearchTerm(event.target.value);
           };
     
-          //here we can do arr.Title.filter 
          useEffect(() => {
             let results = arr.filter(review =>{
                 return review.title.toLowerCase().includes(searchTerm);
-                    /*title: review.title.toLowerCase().includes(searchTerm),
-                    id: review.id*/
-                
             });
 
             console.log(results.id);

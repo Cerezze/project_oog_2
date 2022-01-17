@@ -6,13 +6,6 @@
     width: 650px;
     margin: auto;
     margin-top: 180px;
-    /*You just have to find the correct Div to margin-top*/
-    /*position: absolute; 
-  left: 0; 
-  right: 0; 
-  top: 175px;
-  margin-left: auto; 
-  margin-right: auto;*/
 }
 .SignInBox{
     border: 2px solid red;

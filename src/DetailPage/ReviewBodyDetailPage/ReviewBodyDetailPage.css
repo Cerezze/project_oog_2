@@ -7,7 +7,6 @@
     margin-top: 190px;
     font-weight: bold;
     width: 800px;
-    /*border: 2px solid black;*/
     margin-bottom: 30px;
 }
 .OveralPanel{
@@ -15,10 +14,6 @@
     width: 800px;
     height: 240px;
     margin-bottom: 25px;
-    /*border: 2px solid black;*/
-     /*all children will flex */
-     /* display: flex;
-     flex-wrap: nowrap; */
      background-size: 500px;
      background-repeat: no-repeat;
      background-image: url(../../Designs_and_Flow/basic_designs/OverallSummary.png);
@@ -30,17 +25,12 @@
     color: white;
 }
 .OveralSummaryBody{
-    /*border: 2px solid black;*/
     font-size: 19px;
     width: 440px;
     margin-top: 25px;
     margin-left: 40px;
     color: white;
 }
-/*.RightAdPanel{
-    border: 2px solid black;
-    /*flex-grow: 1;
-}*/
 
 @media screen and (max-width:  415px){
     .leftAdPanel{

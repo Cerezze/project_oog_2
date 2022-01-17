@@ -6,8 +6,6 @@ import AuthContext from '../../store/auth-context';
 import { useEffect } from 'react/cjs/react.development';
 
 const LogInMain = (props) =>{
-
-    //use Ref for optimization
     const [valueEmail, setValueEmail] = useState('');
     const [valuePassword, setValuePassword] = useState('');
     const [isLogin, setIsLogin] = useState(false);
@@ -63,21 +61,14 @@ const LogInMain = (props) =>{
                 }else {
                     return res.json().then(data =>{
                         //show a custom error modal
-                        //console.log(data);
                         let errorMessage ='Authentication failed!';
-                        // if(data && data.error && data.error.message){
-                        //     errorMessage = data.error.message;
-                        // }
                         
                         throw new Error(errorMessage);
                     });
                 }
             }).then(data => {
-                //console.log(data.email);
-                //setLocalId(data.localId);
 
                 const expirationTime = new Date(new Date().getTime() + data.expiresIn * 1000);
-                //console.log(expirationTime);
                 authCtx.login(data.idToken, expirationTime, data.email);
                 history.replace('/');
             }).catch(err =>{
@@ -88,10 +79,6 @@ const LogInMain = (props) =>{
     const switchAuthModeHandler = () => {
         setIsLogin((prevState) => !prevState);
       };
-
-      //post a users array containing this ID and their general
-      //information including how many comments and replies 
-      //are associated with them
 
     return(
         <div className="MAINPAGE">

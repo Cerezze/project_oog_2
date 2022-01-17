@@ -3,8 +3,6 @@ import ReviewSectionDividerAsset from "../../Designs_and_Flow/basic_designs/Revi
 import ReviewParticle from "../ReviewParticle/ReviewParticle";
 
 const ReviewSubSection = (props) => {
-    //console.log(props.Title);
-    //console.log(props.SubCategory);
     return(
         <div className = "ReviewSubSection">
             <div className = "ReviewSubSectionEntry">
@@ -14,7 +12,6 @@ const ReviewSubSection = (props) => {
             </div>
             {/* One Component That holds ParticleListTitle and affiliate ex: Playermechachics, images etc..*/}
             {props.SubCategory.map((i) =>{
-                //console.log(i);
                 return <ReviewParticle key = {i.Title} 
                                        SubCategory = {i}/>;
             })}

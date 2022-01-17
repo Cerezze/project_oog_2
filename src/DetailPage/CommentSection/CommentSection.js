@@ -6,7 +6,6 @@ import { useState, useEffect, useCallback, useContext } from "react";
 import AuthContext from "../../store/auth-context";
 
 const CommentSection = (props) => {
-    //const {isLoading, error, senRequest: postTasks} = useHttp();
     const {isLoading, error, sendRequest: postComments} = useHttp();
     const [comments, setComments] = useState([]);
     const authCtx = useContext(AuthContext);
@@ -84,7 +83,6 @@ const CommentSection = (props) => {
                                 refProp = {props.refProp}/>
             <div className = "CommentSpread">
                 {comments.map(i => {
-                    //console.log(i.text);
                     return <Comment comment = {i}
                                     key = {Math.random()}/>
                 })}

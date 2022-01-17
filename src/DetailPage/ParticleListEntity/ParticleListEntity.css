@@ -1,23 +1,19 @@
 .ParticleListImage{
-    /*border: 2px solid black;*/
     margin: 0px;
     height: 15px;
     display: block;
     float: left;
 }
 .ParticleList{
-    /*border: 2px solid black;*/
     margin-left: 10px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 .ParticlDivider{
-    /*border: 2px solid black;*/
     height: 20px;
     width: 100%;
 }
 
 .ParticleListBlurb{
-     /*border: 2px solid black;*/
      margin-left: 20px;
 }
