@@ -50,6 +50,8 @@ function App() {
     transformReviews);
   }, [fetchReviews]);
 
+  console.log('reviews', reviews);
+
   return (
       <div className = "MainDiv" 
             onScroll = {OnScroll}

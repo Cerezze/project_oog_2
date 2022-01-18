@@ -28,6 +28,7 @@ const CommentSection = (props) => {
             setComments((prevComments) => 
                 prevComments.concat(createdComment)
             );
+            console.log("onclick", comments);
             props.refProp.current.scrollTop = props.refProp.current.scrollHeight;
             
             const data = comments.length;
@@ -61,20 +62,21 @@ const CommentSection = (props) => {
             }, createComment);
     };
 
+    console.log("onrender", comments);
+
     useEffect(()=>{
         const loadedReviews = [];
-    
+
         for (const key in props.DetailReview.Comments) {
-        const quoteObj = {
-            id: key,
-            ...props.DetailReview.Comments[key]
-        };
-    
-        loadedReviews.push(quoteObj);
+            const quoteObj = {
+                id: key,
+                ...props.DetailReview.Comments[key]
+            };
+        
+            loadedReviews.push(quoteObj);
         }
         setComments(loadedReviews);
     }, []);
-
 
     return(
         <div className = "commentSection">
