@@ -8,7 +8,6 @@ import CommentSection from '../../DetailPage/CommentSection/CommentSection';
 const DetailPage = (props) => {
     const params = useParams();
     const location = useLocation();
-
     
     const review = props.loadedReviews.find((review) => review.id === params.reviewData);
     if(!review){
