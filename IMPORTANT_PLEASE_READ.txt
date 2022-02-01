@@ -27,11 +27,5 @@ front end portfolio piece for now so with it being functional, I will try my bes
 improve upon the code as much as possible going forward. If you have any questions about
 the Code please do not hesitate to ask me via email: gm.c.burzo@gmail.com.
 
-- One important functional issue That is top priority is the fact that the comments will not
-update unless refreshed. I intend to fix this first, and as soon as possible. For now please
-refresh the page after you submit a comment (You will need to sign in to do this and create an 
-account, Again, please do not use your real email address or a password that is already in use
-by you).
-
 ** To run my project please see the README as it details how to get started with this
 REACT.JS project.
