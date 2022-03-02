@@ -9,16 +9,18 @@ const Search = (props) =>{
     
     return(<div className="search">
         <img className = "SearchLog" src = {SearchLog} height = {"45px"}/>
-        <input 
+        <input className = "searchIn"
             type = "text" 
             placeholder="   SEARCH..."
             value={props.term}
             onChange={props.Change}/>
-        {props.term ? <ul className = "searchList">{ props.results.map(item =>{ 
-        return(
-            
-            <Link to = {`/detail-review/${"arr" + (item.id + 1)}`} key = {item.id}><li className = "searchListEle" >{item.title}</li></Link>
-            )})}
+        {props.term ? <ul className = "searchList">{ props.results.map(item =>{
+                
+                    console.log(props.results.length < 1);
+                return(
+                    <Link to = {`/detail-review/${"arr" + (item.id + 1)}`} key = {item.id}><li className = "searchListEle" >{item.title}</li></Link>
+                )
+            })}
         </ul> : null}
     </div>);
 };

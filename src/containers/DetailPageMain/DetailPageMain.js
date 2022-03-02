@@ -18,7 +18,8 @@ const DetailPage = (props) => {
         <div className = "MAINPAGE">
 
             <Header GoingUp = {props.GoingUp}
-                    flag = {0}/>
+                    flag = {0}
+                    refProp = {props.refProp2}/>
             <ReviewBodyDetailPage DetailReview = {review}/>
             <CommentSection onAddReview = {props.onAddReview}
                             DetailReview = {review}
