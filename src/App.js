@@ -13,6 +13,7 @@ function App() {
   const prevScrollY = useRef(0);
   const DIV1 = useRef(null);
   const [goingUp, setGoingUp] = useState(true);
+  const [scrollPos, setScrollPos] = useState(0);
 
   const OnScroll = (e) => {
     const currentScrollY = e.target.scrollTop;
@@ -23,6 +24,9 @@ function App() {
       setGoingUp(true);
     }
     prevScrollY.current = currentScrollY;
+
+    setScrollPos(currentScrollY);
+    //console.log(scrollPos);
   };
 
   const authCtx = useContext(AuthContext);
@@ -62,7 +66,8 @@ function App() {
           <FrontPage loadedReviews = {reviews}
                       setLoadedReviews = {setReviews}
                       isLoading = {IsLoading}
-                      GoingUp = {goingUp}/>
+                      GoingUp = {goingUp}
+                      refProp = {scrollPos}/>
         </Route>
         <Route path = '/detail-review/:reviewData'>
           <DetailPage loadedReviews = {reviews} 
@@ -70,6 +75,7 @@ function App() {
                       setLoadedReviews = {setReviews}
                       GoingUp = {goingUp}
                       refProp = {DIV1}
+                      refProp2 = {scrollPos}
                       />
         </Route>
         {!authCtx.isLoggedIn &&<Route path='/auth'>

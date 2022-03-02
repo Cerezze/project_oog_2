@@ -9,25 +9,34 @@ import {Link} from 'react-router-dom';
 
 const Header = (props) =>{
     const [HeaderisVisible, setHeaderIsVisible] = useState(0);
-    const [HeaderOnclick, SetHeaderOnClick] = useState();
-
+    const [HeaderOnclick, SetHeaderOnClick] = useState(false);
+    
     useEffect(() => {
-        if(props.GoingUp == true){
+        console.log(props.GoingUp);
+        console.log(HeaderOnclick);
+        if(HeaderOnclick == true || props.refProp < 100){
+
             setHeaderIsVisible(0);
         }else{
             setHeaderIsVisible(-120);
         }
-    }, [props.GoingUp]);
+    }, [props.GoingUp, HeaderOnclick, props.refProp]);
+
+    const headerOnClickHandler = () => {
+        console.log("cicked");
+        SetHeaderOnClick(prevState => !prevState);
+    }
+
     return(
     <div className="HEADER"
     style = {{
         top: `${HeaderisVisible}px`
     }}>
-        <div className="headerLeftPanel">
+        <div className="headerLeftPanel" onClick = {headerOnClickHandler}>
             <div className = "leftAlignHeader">
             </div>
             <div className = "Logo">
-                <Link to = "/"><img src = {Logo} height = {"90px"}/></Link>
+                <Link to = "/"><img src = {Logo}/></Link>
             </div>
             <div className = "HeaderText">
                     <strong>Software and Tech Reviews</strong>

@@ -9,25 +9,39 @@
     width: calc(100% - 16px);
     z-index: 1;
     transition-duration: 0.3s;
+    height: 160px;
+}
+
+.HEADER:hover{
+    height: 170px;
 }
 
 .headerLeftPanel{
     height: 160px;
     flex-grow: 3;
     display: flex;
+    cursor: pointer;
 }
 
 .leftAlignHeader{
     flex-grow: 0.1;
 }
 
-.Logo{
+.Logo img{
     flex-grow: 0.1;
     margin-top: 17px;
+    transition-duration: 0.3s;
+    height: 90px;
+}
+
+.Logo img:hover{
+    border: 5px solid yellow;
+    border-radius: 5px;
+    height: 95px;
 }
 
 .HeaderText{
-    margin-top: 33px;
+    margin-top: 75px;
     color: white;
     font-size: 20px;
     flex-grow: 2;

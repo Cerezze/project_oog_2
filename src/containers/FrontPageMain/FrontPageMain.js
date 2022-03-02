@@ -23,16 +23,12 @@ import {useState, useEffect} from 'react';
     
          useEffect(() => {
             let results = arr.filter(review =>{
-                return review.title.toLowerCase().includes(searchTerm);
+                return review.title.includes(searchTerm);
             });
-
-            console.log(results.id);
 
             setSearchResults(results);
 
           }, [searchTerm]);
-
-
 
           const handleClickSort = (id) => {
             let arr1 = props.loadedReviews;
@@ -84,7 +80,8 @@ import {useState, useEffect} from 'react';
                         Change = {handleChange}
                         reviews = {props.loadedReviews}
                         GoingUp = {props.GoingUp}
-                        flag = {1}/>}
+                        flag = {1}
+                        refProp = {props.refProp}/>}
                 <Body reviews = {props.loadedReviews}
                       loading = {props.isLoading}
                       results = {searchResults}
