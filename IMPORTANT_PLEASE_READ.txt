@@ -12,14 +12,9 @@ real email address, I will inform you view the email you provided and I will del
 
 Below I will list the things I intend to fix over time:
 
-- for the best experience currently please view at BROWSER WIDTH: 1217px.
+- for the best experience currently please view at BROWSER WIDTH: 1217px and on Google Chrome.
 I am currently working on improving the look of this site on smaller screens.
 This is my current priority going forward.
-
-- The search box DOES NOT work with capital letters, nor does the black drop down
-adjust to the number of items in the list. I intend to fix this, but I think 
-what I have is currently useable so it is not a priority. (Again please use 
-lowercase letters for the search box).
 
 - If You are viewing the code, please note that I am aware that it is not optimized
 nor is it clean, commented (and somethimes not modularized enough). This is just a 
