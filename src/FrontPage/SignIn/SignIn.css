@@ -21,19 +21,3 @@
     position: relative;
     font-weight: bold;
 }
-
-
-
-@media screen and (max-width: 1000px){
-.signIn{
-        height: 55px;
-        margin: 5px;
-    }
-}
-
-@media screen and (max-width:  415px){
-    .signIn{
-            border: 2px solid black;
-            height: 32px;
-        }
-    }

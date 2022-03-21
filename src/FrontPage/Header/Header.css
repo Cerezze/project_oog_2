@@ -45,6 +45,7 @@
     color: white;
     font-size: 20px;
     flex-grow: 2;
+    transition-duration: 0.3s;
 }
 
 .headerRightPanel{
@@ -52,41 +53,55 @@
     flex-grow: 1;
 }
 
-/*@media screen and (max-width: 1000px){
-    .HEADER{
-        /*border: 2px solid black;
-        height: 145px;
-        /*all children will flex 
-    }
-    
-    .headerLeftPanel{
-        /*border: 2px solid black;
-        height: 130px;
-        /*float: left;
-    }
-    
-    .headerRightPanel{
-        /*border: 2px solid black;
-        height: 130px;
-        /* this item shall fill remaining space 
-    }
-}*/
+@media screen and (max-width: 990px){
+        .HEADER{
+            margin: 0px;
+            height: 160px;
+            width: calc(100% - 16px);
+        }
+        .HEADER:hover{
+            height: 160px;
+        }
+        .HeaderText{
+            position: absolute;
+            top: 30px;
+            left: 40px;
+            font-size: 16px;
+        }
+        .Logo img{
+            margin-top: 20px;
+            height: 75px;
+        }
+        .Logo img:hover{
+            border: none;
+            margin-top: 20px;
+            height: 75px;
+        }
+        .leftAlignHeader{
+            margin-left: -20px;
+        }
+}
 
-@media screen and (max-width: 415px){
-    .HEADER{
-        border: 2px solid black;
-        height: 100px;
-        display: block;
-    }
-    
-    .headerLeftPanel{
-        border: 2px solid black;
-        height: 85px;
+@media screen and (max-width: 621px){
+    .HeaderText{
         display: none;
     }
-    
-    .headerRightPanel{
-        border: 2px solid black;
-        height: 85px;
+
+    .HEADER{
+        height: 150px;
+        width: 100%;
+    }
+    .HEADER:hover{
+        height: 150px;
+    }
+    .Logo img:hover{
+        border: none;
+        margin-top: 30px;
+        height: 75px;
+    }
+    .Logo img{
+        margin-top: 30px;
+        height: 75px;
+        margin-left: 15px;
     }
 } 

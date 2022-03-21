@@ -25,11 +25,25 @@ const reviewBody = (props) =>{
                     </div>
                 </div>
             </div>
-            <div className = "leftReviewPanelmob">
-
-            </div>
             <TabBar title = {props.title}/>
         </div>
+    </div>
+    <div className = "reviewBodyMobile">
+        <TabBar title = {props.title}/>
+        <img className = "dynamicImage" src = {"https://" + props.URLimage} alt="IMAGE NOT HERE" />
+        <div className = "reviewStatus">
+                <div className = "dateTime">
+                    {props.dateAndTime}
+                </div>
+                <div className = "Icon">
+                    <div className = "commentIcon" >
+                        <img src = {Comments} height = {"40px"}/>
+                    </div>
+                    <div className = "numOfComments">
+                        {props.commentNum}
+                    </div>
+                </div>
+            </div>
     </div>
     </Link>
 )};

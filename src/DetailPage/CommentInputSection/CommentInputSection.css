@@ -51,8 +51,15 @@
     cursor: pointer;
 }
 
-@media screen and (max-width:  415px){
-    .CommentInputSection{
-        display: none;
+@media screen and (max-width:  990px){
+    .CommentBox{
+        width: 780px;
+        margin: auto;
+        margin-left: 20px;
+    }
+
+    .SubmitArea{
+        width: 740px;
+        margin-bottom: 25px;
     }
 }

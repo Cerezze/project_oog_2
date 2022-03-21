@@ -10,3 +10,10 @@
 .ReviewSection{
     margin: 5px;
 }
+
+@media screen and (max-width:  990px){
+    .ReviewContainer{
+        width: 600px;
+        margin: auto;
+    }
+}

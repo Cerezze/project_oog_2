@@ -59,14 +59,19 @@
 
 @media screen and (max-width: 1000px){
 .search{
-        height: 52px;
-        margin: 5px;
+        margin-top: -13px;
     }
 }
 
-@media screen and (max-width: 415px){
+@media screen and (max-width: 621px){
     .search{
-            border: 2px solid black;
-            height: 32px;
-        }
+        margin-top: -18px;
+        width: 180px;
     }
+    .searchIn{
+      width: 175px;
+    }
+    .SearchLog{
+        display: none;
+    }
+}

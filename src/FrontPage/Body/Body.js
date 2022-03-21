@@ -56,6 +56,7 @@ const Body = (props) =>{
                     </div>
                 </div>
             </div>
+            
             <div className="bodyMiddlePanel">
                 <h1 className = "tabTitle">REVIEWS</h1>
                 <div className = "reviewCont">
@@ -87,9 +88,18 @@ const Body = (props) =>{
             <div className="bodyRightPanel">
             </div>
         </div>
-        
-        <div className = "bodyBottomPanel">
-
+        <div class = "bodyLeftPanelMob">
+        <ul className = "sortByList">
+                        <li onClick = {() => props.Sort(1)}>
+                            Title
+                        </li>
+                        <li onClick = {() => props.Sort(2)}>
+                            Time Posted
+                        </li>
+                        <li onClick = {() => props.Sort(3)}>
+                            Popularity
+                        </li>
+                    </ul>
         </div>
     </div>
 )};

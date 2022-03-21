@@ -39,3 +39,10 @@
     border: 2px solid black;
     margin: 5px;
 }
+
+@media screen and (max-width:  990px){
+    .Comment{
+        width: 740px;
+        margin: auto;
+    }
+}
