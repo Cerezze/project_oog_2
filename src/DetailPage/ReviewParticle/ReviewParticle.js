@@ -8,7 +8,8 @@ import PositiveParticleListAsset from "../../Designs_and_Flow/basic_designs/Part
 const ReviewParticle = (props) => {
 
     return(
-        <div className = "ReviewParticle">
+        <div>
+            <div className = "ReviewParticle">
                 <div className = "ReviewParticleImage">
                     <img className = "DynamicImage" src = {props.SubCategory.Image} alt="IMAGE NOT HERE" />
                 </div>
@@ -23,10 +24,22 @@ const ReviewParticle = (props) => {
                                         Image = {NegativeParticleListAsset} 
                                         List = {props.SubCategory.Cons}/>
                 </div>
-                <div className = "ReviewImageMobile">
-                    ReviewImageMobile
-                </div> 
             </div>
+            <div className = "ReviewImageMobile">
+                <p className = "ParticleTitle">
+                    {props.SubCategory.Title}
+                </p>
+                <ParticleListEntity Divider = {PositiveParticleDivider} 
+                                    Image = {PositiveParticleListAsset} 
+                                    List = {props.SubCategory.Pros}/>
+                <ParticleListEntity Divider = {NegativeParticleDivider} 
+                                    Image = {NegativeParticleListAsset} 
+                                    List = {props.SubCategory.Cons}/>
+                <div className = "ReviewParticleImage">
+                    <img className = "DynamicImage" src = {props.SubCategory.Image} alt="IMAGE NOT HERE" />
+                </div>
+            </div> 
+        </div>
     );
 }
 

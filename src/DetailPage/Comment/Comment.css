@@ -40,7 +40,7 @@
     margin: 5px;
 }
 
-@media screen and (max-width:  990px){
+@media screen and (max-width:  1200px){
     .Comment{
         width: 740px;
         margin: auto;

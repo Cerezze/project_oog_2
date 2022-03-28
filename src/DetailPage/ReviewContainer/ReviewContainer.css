@@ -11,9 +11,16 @@
     margin: 5px;
 }
 
-@media screen and (max-width:  990px){
+@media screen and (max-width:  1200px){
     .ReviewContainer{
         width: 600px;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width:  805px){
+    .ReviewContainer{
+        width: calc(100% - 20px);
         margin: auto;
     }
 }

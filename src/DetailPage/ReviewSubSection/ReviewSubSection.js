@@ -4,17 +4,27 @@ import ReviewParticle from "../ReviewParticle/ReviewParticle";
 
 const ReviewSubSection = (props) => {
     return(
-        <div className = "ReviewSubSection">
-            <div className = "ReviewSubSectionEntry">
-                <img className = "ReviewSectionDividerAsset" src = {ReviewSectionDividerAsset}/>
-                <p className = "ReviewSectionEntryTitle">{props.Title}</p>
-                <p className = "ReviewSectionEntryBody">{props.Body}</p>
+        <div>
+            <div className = "ReviewSubSection">
+                <div className = "ReviewSubSectionEntry">
+                    <img className = "ReviewSectionDividerAsset" src = {ReviewSectionDividerAsset}/>
+                    <p className = "ReviewSectionEntryTitle">{props.Title}</p>
+                    <p className = "ReviewSectionEntryBody">{props.Body}</p>
+                </div>
+                {/* One Component That holds ParticleListTitle and affiliate ex: Playermechachics, images etc..*/}
+                {props.SubCategory.map((i) =>{
+                    return <ReviewParticle key = {i.Title} 
+                                        SubCategory = {i}/>;
+                })}
             </div>
-            {/* One Component That holds ParticleListTitle and affiliate ex: Playermechachics, images etc..*/}
-            {props.SubCategory.map((i) =>{
-                return <ReviewParticle key = {i.Title} 
-                                       SubCategory = {i}/>;
-            })}
+
+            {/* <div className = "RSSMob">
+                <div className = "ReviewSubSectionEntry">
+                    <img className = "ReviewSectionDividerAsset" src = {ReviewSectionDividerAsset}/>
+                    <p className = "ReviewSectionEntryTitle">{props.Title}</p>
+                    <p className = "ReviewSectionEntryBody">{props.Body}</p>
+                </div>
+            </div> */}
         </div>
     );
 }

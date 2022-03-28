@@ -8,7 +8,7 @@
     margin: 5px;
 }
 
-@media screen and (max-width:  990px){
+@media screen and (max-width:  1200px){
     .commentSection{
         margin: 5px;
         width: 800px;

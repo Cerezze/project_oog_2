@@ -32,7 +32,7 @@
     color: white;
 }
 
-@media screen and (max-width:  990px){
+@media screen and (max-width:  1200px){
     .DetailReview{
         width: 800px;
         margin: auto;
@@ -52,5 +52,32 @@
          background-size: 500px;
          background-repeat: no-repeat;
          background-image: url(../../Designs_and_Flow/basic_designs/OverallSummary.png);
+    }
+}
+
+@media screen and (max-width:  805px){
+    .DetailReview{
+        width: 100%;
+        margin: auto;
+    }
+    .ReviewTitle{
+        width: calc(100% - 25px);
+    }
+    .OveralPanel{
+       width: calc(100% - 25px);
+    }
+}
+
+@media screen and (max-width: 535px){
+    .OveralPanel{
+        background-size: 365px;
+        margin-bottom: -30px;
+    }
+
+    .OveralSummaryBody{
+        margin-top: -10px;
+        margin-left: 25px;
+        width: 330px;
+        font-size: 17px;
     }
 }
