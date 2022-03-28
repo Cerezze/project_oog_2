@@ -15,3 +15,9 @@
         margin: auto;
     }
 }
+
+@media screen and (max-width:  815px){
+    .commentSection{
+        width: 100%;
+    }
+}

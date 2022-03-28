@@ -76,6 +76,7 @@
         float: none;
         width: 100%;
         margin: 0px;
-        background-color: grey;
+        margin-top: -12px;
+        font-size: 110px;
     }
 }

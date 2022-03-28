@@ -46,3 +46,10 @@
         margin: auto;
     }
 }
+
+@media screen and (max-width:  815px){
+    .Comment{
+        width: calc(100% - 40px);
+        margin: auto;
+    }
+}
