@@ -10,17 +10,5 @@ I believe that this project is fully featured enough to show.
 EXISTS IN YOUR ACCOUNTS. THIS IS FOR TESTING ONLY. If you do use a 
 real email address, I will inform you view the email you provided and I will delete it.)
 
-Below I will list the things I intend to fix over time:
-
-- for the best experience currently please view at BROWSER WIDTH: 1217px and on Google Chrome.
-I am currently working on improving the look of this site on smaller screens.
-This is my current priority going forward.
-
-- If You are viewing the code, please note that I am aware that it is not optimized
-nor is it clean, commented (and somethimes not modularized enough). This is just a 
-front end portfolio piece for now so with it being functional, I will try my best to 
-improve upon the code as much as possible going forward. If you have any questions about
-the Code please do not hesitate to ask me via email: gm.c.burzo@gmail.com.
-
 ** To run my project please see the README as it details how to get started with this
 REACT.JS project.
