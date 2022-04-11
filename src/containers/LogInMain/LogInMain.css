@@ -24,7 +24,7 @@ label{
 }
 
 .infoInput {
-    border: none;
+   border: none;
    display: block;
    margin: 0 auto;
    width: 500px;
@@ -32,7 +32,7 @@ label{
 }
 
 .SubmitInfo{
-    border: none;
+     border: none;
     background-color: yellow;
     margin: 0 auto;
     margin-top: 50px;
@@ -51,4 +51,14 @@ label{
     color: white;
     background-color: red;
     cursor: pointer;
+}
+
+@media screen and (max-width:  710px){
+    .SignInPage{
+        width: 350px;
+    }
+
+    .infoInput {
+        width: 340px;
+     }
 }

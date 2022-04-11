@@ -87,7 +87,7 @@
 
     .bodyLeftPanelMob{
         display: block;
-        background-color: white;
+        background-color: lightgrey;
         height: 50px;
         border-top: 25px solid red;
         position: fixed;
@@ -127,7 +127,7 @@
     }
     .bodyLeftPanelMob{
         display: block;
-        background-color: white;
+        background-color: lightgray;
         height: 50px;
         border-top: 25px solid red;
         position: fixed;
