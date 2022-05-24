@@ -13,7 +13,7 @@ const DetailPage = (props) => {
     if(!review){
         return <p>No Review Found!!</p>
     }
-
+    
     return(
         <div className = "MAINPAGE">
 
@@ -23,7 +23,10 @@ const DetailPage = (props) => {
             <ReviewBodyDetailPage DetailReview = {review}/>
             <CommentSection onAddReview = {props.onAddReview}
                             DetailReview = {review}
-                            refProp = {props.refProp}/>
+                            setLoadedReviews = {props.setLoadedReviews}
+                            loadedReviews = {props.loadedReviews}
+                            refProp = {props.refProp}
+                            reviewIdx = {params.reviewIdx}/>
             
         </div>
     );

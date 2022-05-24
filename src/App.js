@@ -54,8 +54,8 @@ function App() {
     transformReviews);
   }, [fetchReviews]);
 
-  console.log('reviews', reviews);
-
+  console.log(reviews);
+  
   return (
       <div className = "MainDiv" 
             onScroll = {OnScroll}
@@ -69,7 +69,7 @@ function App() {
                       GoingUp = {goingUp}
                       refProp = {scrollPos}/>
         </Route>
-        <Route path = '/detail-review/:reviewData'>
+        <Route path = '/detail-review/:reviewData/:reviewIdx'>
           <DetailPage loadedReviews = {reviews} 
                       isLoading = {IsLoading}
                       setLoadedReviews = {setReviews}

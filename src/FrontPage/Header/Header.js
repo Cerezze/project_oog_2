@@ -12,8 +12,6 @@ const Header = (props) =>{
     const [HeaderOnclick, SetHeaderOnClick] = useState(false);
     
     useEffect(() => {
-        console.log(props.GoingUp);
-        console.log(HeaderOnclick);
         if(HeaderOnclick == true || props.refProp < 100){
 
             setHeaderIsVisible(0);

@@ -3,10 +3,42 @@ import './reviewBody.css';
 import TabBar from "../tabBar/tabBar";
 import Comments from '../../Designs_and_Flow/basic_designs/numberOfcomments.png';
 import { Link } from 'react-router-dom';
+import {useState, useEffect} from 'react';
 
-const reviewBody = (props) =>{
+const ReviewBody = (props) =>{
+    const [CommentNum, setCommentNum] = useState(props.commentNum);
+
+    useEffect(()=>{
+        fetch(`https://ooglandish-default-rtdb.firebaseio.com/Reviews/${props.id}/commentNum.json`)
+        .then(response => response.json())
+        .then(data => {
+        setCommentNum(data);
+        });
+    }, []);
+
+    // useEffect(()=>{
+    //         fetch(`https://ooglandish-default-rtdb.firebaseio.com/Comments/${props.id}.json`)
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             console.log("inFectch Objects",data);
+    //             const comments = [];
+    //             for (const key in data) {
+    //                 const quoteObj = {
+    //                 id: key,
+    //                 ...data[key]
+    //                 };
+                
+    //                 comments.push(quoteObj);
+                    
+    //             }
+    //             console.log("inFectch Objects",data);
+    //             if(data !== null)
+    //                 setCommentNum(comments.length + 1);
+    //         });
+    //     }, []);
+
     return (
-    <Link to = {`/detail-review/${props.id}`}>
+    <Link to = {`/detail-review/${props.id}/${props.idx}`}>
     <div className="reviewBody">
         <div className = "leftReviewPanel">
             <img className = "dynamicImage" src = {"https://" + props.URLimage} alt="IMAGE NOT HERE" />
@@ -21,7 +53,7 @@ const reviewBody = (props) =>{
                         <img src = {Comments} height = {"40px"}/>
                     </div>
                     <div className = "numOfComments">
-                        {props.commentNum}
+                        {CommentNum}
                     </div>
                 </div>
             </div>
@@ -40,7 +72,7 @@ const reviewBody = (props) =>{
                         <img src = {Comments} height = {"40px"}/>
                     </div>
                     <div className = "numOfComments">
-                        {props.commentNum}
+                        {CommentNum}
                     </div>
                 </div>
             </div>
@@ -48,4 +80,4 @@ const reviewBody = (props) =>{
     </Link>
 )};
 
-export default reviewBody;
+export default ReviewBody;

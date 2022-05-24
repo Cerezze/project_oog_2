@@ -38,10 +38,32 @@ const CommentSection = (props) => {
             setLoadedComments((prevComments) => 
                 prevComments.concat(createdComment)
             );
-
             props.refProp.current.scrollTop = props.refProp.current.scrollHeight;
-
+            //Check to see if the CORRECT ELEMENTS ARE BEING incremented,
+            //also test to see if the state is  being incremented and if it will sort eventually
             const data1 = loadedComments.length + 1;
+
+            const LoadedReviews = [];
+            for (const key in props.loadedReviews) {
+              const quoteObj = {
+                id: key,
+                ...props.loadedReviews[key]
+              };
+          
+              LoadedReviews.push(quoteObj);
+            }
+
+            let arrob = LoadedReviews;
+            console.log("COMMENTSECTION loadedreviews: ", props.loadedReviews);
+            console.log("CHANGEDARROB0",arrob[props.reviewIdx].commentNum);
+            arrob[props.reviewIdx].commentNum = arrob[props.reviewIdx].commentNum + 1;
+            console.log("CHANGEDARROB1", arrob[props.reviewIdx].commentNum);
+            let changedArrob = arrob;
+
+            props.setLoadedReviews(prevReviews => {
+                console.log("CHANGEDARROB2",changedArrob);
+                return [...changedArrob]
+            });
 
             fetch(`https://ooglandish-default-rtdb.firebaseio.com/Reviews/${props.DetailReview.id}/commentNum.json`, {
                 method: 'PUT', // or 'PUT'
@@ -61,7 +83,6 @@ const CommentSection = (props) => {
         .catch((error) => {
         console.error('Error:', error);
         });
-
     };
 
     useEffect(()=>{

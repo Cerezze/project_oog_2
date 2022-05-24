@@ -60,6 +60,7 @@ import {useState, useEffect} from 'react';
                 
             else if(id == 3){
                 console.log("Pop");
+                console.log("in SORT",arr1);
                 for(let i = arr1.length - 1; i >= 0; i--){
                     for(let j = 0; j < arr1.length - 1; j++){
                         if(arr1[j].commentNum < arr1[j + 1].commentNum){
