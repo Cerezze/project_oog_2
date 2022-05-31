@@ -4,6 +4,9 @@ import OverallScore from "../OverallScore/OverallScore";
 import OverallSummaryAsset from "../../Designs_and_Flow/basic_designs/OverallSummary.png";
 
 const ReviewBodyDetailPage = (props) =>{
+
+    console.log(props.DetailReview);
+
     return(
         <div className = "BodyDetailPage">
 
@@ -13,11 +16,12 @@ const ReviewBodyDetailPage = (props) =>{
                     </h1>
                 <div className = "OveralPanel">
                     <p className = "OveralSummaryTitle">Overall Summary</p>
-                    <p className = "OveralSummaryBody">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+                    <p className = "OveralSummaryBody">{props.DetailReview.overallBlurb}</p>
                 </div>
 
                 <ReviewContainer DetailReview = {props.DetailReview.DetailReview}/>
-                <OverallScore/>
+                <OverallScore score = {props.DetailReview.score}
+                              overallScore = {props.DetailReview.overallScore}/>
             </div>
         </div>
     );

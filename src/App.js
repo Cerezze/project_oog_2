@@ -1,13 +1,18 @@
 import "./App.css";
 import FrontPage from './containers/FrontPageMain/FrontPageMain';
-import DetailPage from './containers/DetailPageMain/DetailPageMain';
+//import DetailPage from './containers/DetailPageMain/DetailPageMain';
 import { Route, Switch, Redirect, useLocation} from 'react-router-dom';
 import {useState, useEffect, useContext, useRef} from 'react';
 import useHttp from "./usehttp/usehttp";
-import AuthPage from './containers/LogInMain/LogInMain';
-import Profile from './containers/UserProfileMain/UserProfileMain';
+//import AuthPage from './containers/LogInMain/LogInMain';
+//import Profile from './containers/UserProfileMain/UserProfileMain';
 import AuthContext from './store/auth-context';
 import ScrollToTop from "./ScrollToTop/ScrollToTop";
+import React, { Suspense } from 'react';
+
+const DetailPage = React.lazy(() => import('./containers/DetailPageMain/DetailPageMain'));
+const AuthPage = React.lazy(() => import('./containers/LogInMain/LogInMain'));
+const Profile = React.lazy(() => import('./containers/UserProfileMain/UserProfileMain'));
 
 function App() {
   const prevScrollY = useRef(0);
@@ -61,33 +66,35 @@ function App() {
             onScroll = {OnScroll}
             ref = {DIV1}>
       <ScrollToTop refProp = {DIV1}/>
-      <Switch>
-        <Route path = '/' exact>
-          <FrontPage loadedReviews = {reviews}
-                      setLoadedReviews = {setReviews}
-                      isLoading = {IsLoading}
-                      GoingUp = {goingUp}
-                      refProp = {scrollPos}/>
-        </Route>
-        <Route path = '/detail-review/:reviewData/:reviewIdx'>
-          <DetailPage loadedReviews = {reviews} 
-                      isLoading = {IsLoading}
-                      setLoadedReviews = {setReviews}
-                      GoingUp = {goingUp}
-                      refProp = {DIV1}
-                      refProp2 = {scrollPos}
-                      />
-        </Route>
-        {!authCtx.isLoggedIn &&<Route path='/auth'>
-          <AuthPage GoingUp = {goingUp}/>
-        </Route>}
-        {authCtx.isLoggedIn ? <Route path='/profile'>
-          <Profile GoingUp = {goingUp}/>
-        </Route> : <Redirect to = "/auth"/>}
-        <Route path = "*">
-          <p> Not Found!</p>
-        </Route>
-      </Switch>
+      <Suspense fallback = {<p>LOADING...</p>}>
+        <Switch>
+          <Route path = '/' exact>
+            <FrontPage loadedReviews = {reviews}
+                        setLoadedReviews = {setReviews}
+                        isLoading = {IsLoading}
+                        GoingUp = {goingUp}
+                        refProp = {scrollPos}/>
+          </Route>
+          <Route path = '/detail-review/:reviewData/:reviewIdx'>
+            <DetailPage loadedReviews = {reviews} 
+                        isLoading = {IsLoading}
+                        setLoadedReviews = {setReviews}
+                        GoingUp = {goingUp}
+                        refProp = {DIV1}
+                        refProp2 = {scrollPos}
+                        />
+          </Route>
+          {!authCtx.isLoggedIn &&<Route path='/auth'>
+            <AuthPage GoingUp = {goingUp}/>
+          </Route>}
+          {authCtx.isLoggedIn ? <Route path='/profile'>
+            <Profile GoingUp = {goingUp}/>
+          </Route> : <Redirect to = "/auth"/>}
+          <Route path = "*">
+            <p> Not Found!</p>
+          </Route>
+        </Switch>
+      </Suspense>
       </div>
   );
 }
