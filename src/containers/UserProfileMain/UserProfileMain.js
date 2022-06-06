@@ -23,7 +23,6 @@ const UserProfileMain = (props) =>{
     }
 
     const submitChanges = () => {
-        console.log(passwordVal);
 
         const enteredNewPassword = passwordVal
         fetch('https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyD1vtzfEeXSJca_CkivVCtzkSOm2BmEu0w',

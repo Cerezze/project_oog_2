@@ -31,7 +31,6 @@ function App() {
     prevScrollY.current = currentScrollY;
 
     setScrollPos(currentScrollY);
-    //console.log(scrollPos);
   };
 
   const authCtx = useContext(AuthContext);
@@ -58,8 +57,6 @@ function App() {
     fetchReviews({url: 'https://ooglandish-default-rtdb.firebaseio.com/Reviews.json'},
     transformReviews);
   }, [fetchReviews]);
-
-  console.log(reviews);
   
   return (
       <div className = "MainDiv" 

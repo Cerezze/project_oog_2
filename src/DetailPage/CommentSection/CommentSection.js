@@ -54,14 +54,10 @@ const CommentSection = (props) => {
             }
 
             let arrob = LoadedReviews;
-            //console.log("COMMENTSECTION loadedreviews: ", props.loadedReviews);
-            //console.log("CHANGEDARROB0",arrob[props.reviewIdx].commentNum);
             arrob[props.reviewIdx].commentNum = arrob[props.reviewIdx].commentNum + 1;
-            //console.log("CHANGEDARROB1", arrob[props.reviewIdx].commentNum);
             let changedArrob = arrob;
 
             props.setLoadedReviews(prevReviews => {
-                //console.log("CHANGEDARROB2",changedArrob);
                 return [...changedArrob]
             });
 

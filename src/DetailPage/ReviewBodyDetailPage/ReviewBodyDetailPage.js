@@ -5,8 +5,6 @@ import OverallSummaryAsset from "../../Designs_and_Flow/basic_designs/OverallSum
 
 const ReviewBodyDetailPage = (props) =>{
 
-    console.log(props.DetailReview);
-
     return(
         <div className = "BodyDetailPage">
 

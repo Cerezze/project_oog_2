@@ -34,7 +34,6 @@ import {useState, useEffect} from 'react';
             let arr1 = props.loadedReviews;
 
            if(id == 1){
-                console.log("Genre");
                 for(let i = arr1.length - 1; i >= 0; i--){
                     for(let j = 0; j < arr1.length - 1; j++){
                         if(arr1[j].Title > arr1[j + 1].Title){
@@ -46,7 +45,6 @@ import {useState, useEffect} from 'react';
                 }
             }
             else if(id == 2){ 
-                console.log("Time Posted");
                 for(let i = arr1.length - 1; i >= 0; i--){
                     for(let j = 0; j < arr1.length - 1; j++){
                         if(arr1[j].Date < arr1[j + 1].Date){
@@ -59,8 +57,6 @@ import {useState, useEffect} from 'react';
             }
                 
             else if(id == 3){
-                console.log("Pop");
-                console.log("in SORT",arr1);
                 for(let i = arr1.length - 1; i >= 0; i--){
                     for(let j = 0; j < arr1.length - 1; j++){
                         if(arr1[j].commentNum < arr1[j + 1].commentNum){

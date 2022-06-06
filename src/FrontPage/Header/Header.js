@@ -21,7 +21,6 @@ const Header = (props) =>{
     }, [props.GoingUp, HeaderOnclick, props.refProp]);
 
     const headerOnClickHandler = () => {
-        console.log("cicked");
         SetHeaderOnClick(prevState => !prevState);
     }
 
