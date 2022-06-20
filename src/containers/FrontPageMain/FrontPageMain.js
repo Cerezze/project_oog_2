@@ -8,14 +8,16 @@ import {useState, useEffect} from 'react';
         const [searchTerm, setSearchTerm] = useState("");
         const [searchResults, setSearchResults] = useState([]);
         
-        let num = props.loadedReviews.length;
-          let arr = props.loadedReviews.map((i, index) =>{
+        let num = props.lreviews.length;
+          let arr = props.lreviews.map((i, index) =>{
                 num -= 1;
               return {
                   title: i.Title,
                   id: num
                 }
           })
+          //console.log("loadedreviews: ", props.loadedReviews);
+          //console.log("arr: ", arr);
     
         const handleChange = event => {
             setSearchTerm(event.target.value);

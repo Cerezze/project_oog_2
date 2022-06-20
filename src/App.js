@@ -31,21 +31,19 @@ function App() {
     prevScrollY.current = currentScrollY;
 
     setScrollPos(currentScrollY);
-<<<<<<< HEAD
-=======
-    //console.log(scrollPos);
->>>>>>> 6db29705fa10ea78163f5bf1d59e42fa2a9fba6f
   };
 
   const authCtx = useContext(AuthContext);
 
   const [reviews, setReviews] = useState([]);
+  const [lreviews, setLreviews] = useState([]);
   
   const { isLoading: IsLoading, error, sendRequest: fetchReviews } = useHttp();
 
   useEffect(() => {
     const transformReviews = (reviewObj) => {
       const loadedReviews = [];
+      const staticReviews = [];
       for (const key in reviewObj) {
         const quoteObj = {
           id: key,
@@ -53,21 +51,24 @@ function App() {
         };
     
         loadedReviews.push(quoteObj);
+        staticReviews.push(quoteObj);
       }
 
       setReviews(loadedReviews.reverse());
+      setLreviews(staticReviews.reverse());
     }
 
     fetchReviews({url: 'https://ooglandish-default-rtdb.firebaseio.com/Reviews.json'},
     transformReviews);
   }, [fetchReviews]);
+  //console.log("lreviews: ", lreviews);
+  //console.log("reviews: ", reviews);
   
   return (
       <div className = "MainDiv" 
             onScroll = {OnScroll}
             ref = {DIV1}>
       <ScrollToTop refProp = {DIV1}/>
-<<<<<<< HEAD
       <Suspense fallback = {<p>LOADING...</p>}>
         <Switch>
           <Route path = '/' exact>
@@ -75,7 +76,8 @@ function App() {
                         setLoadedReviews = {setReviews}
                         isLoading = {IsLoading}
                         GoingUp = {goingUp}
-                        refProp = {scrollPos}/>
+                        refProp = {scrollPos}
+                        lreviews = {lreviews}/>
           </Route>
           <Route path = '/detail-review/:reviewData/:reviewIdx'>
             <DetailPage loadedReviews = {reviews} 
@@ -97,35 +99,6 @@ function App() {
           </Route>
         </Switch>
       </Suspense>
-=======
-      <Switch>
-        <Route path = '/' exact>
-          <FrontPage loadedReviews = {reviews}
-                      setLoadedReviews = {setReviews}
-                      isLoading = {IsLoading}
-                      GoingUp = {goingUp}
-                      refProp = {scrollPos}/>
-        </Route>
-        <Route path = '/detail-review/:reviewData'>
-          <DetailPage loadedReviews = {reviews} 
-                      isLoading = {IsLoading}
-                      setLoadedReviews = {setReviews}
-                      GoingUp = {goingUp}
-                      refProp = {DIV1}
-                      refProp2 = {scrollPos}
-                      />
-        </Route>
-        {!authCtx.isLoggedIn &&<Route path='/auth'>
-          <AuthPage GoingUp = {goingUp}/>
-        </Route>}
-        {authCtx.isLoggedIn ? <Route path='/profile'>
-          <Profile GoingUp = {goingUp}/>
-        </Route> : <Redirect to = "/auth"/>}
-        <Route path = "*">
-          <p> Not Found!</p>
-        </Route>
-      </Switch>
->>>>>>> 6db29705fa10ea78163f5bf1d59e42fa2a9fba6f
       </div>
   );
 }

@@ -35,10 +35,6 @@
 }
 
 .Logo img:hover{
-<<<<<<< HEAD
-=======
-    border: 5px solid yellow;
->>>>>>> 6db29705fa10ea78163f5bf1d59e42fa2a9fba6f
     border-radius: 5px;
     height: 95px;
 }
