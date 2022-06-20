@@ -58,7 +58,7 @@ const Body = (props) =>{
             </div>
             
             <div className="bodyMiddlePanel">
-                <h1 className = "tabTitle">REVIEWS</h1>
+                <h1 className = "tabTitle">CONTENT TABS</h1>
                 <div className = "reviewCont">
                     {/*arr1.length === 0 ?*/ props.reviews.map((i,index) =>{
                                     return (

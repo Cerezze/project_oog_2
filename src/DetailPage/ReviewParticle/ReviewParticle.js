@@ -10,12 +10,12 @@ const ReviewParticle = (props) => {
     return(
         <div>
             <div className = "ReviewParticle">
-                <div className = "ReviewParticleImage">
+                {props.SubCategory.Image ? <div className = "ReviewParticleImage">
                     <img className = "DynamicImage" src = {props.SubCategory.Image} alt="IMAGE NOT HERE" />
-                </div>
+                </div> : <div></div>}
                  <div className = "ReviewParticleText">
                     <p className = "ParticleTitle">
-                        {props.SubCategory.Title}
+                        {props.SubCategory.Title ? props.SubCategory.Title : ""}
                     </p>
                     <ParticleListEntity Divider = {PositiveParticleDivider} 
                                         Image = {PositiveParticleListAsset} 
@@ -27,7 +27,7 @@ const ReviewParticle = (props) => {
             </div>
             <div className = "ReviewImageMobile">
                 <p className = "ParticleTitle">
-                    {props.SubCategory.Title}
+                    {props.SubCategory.Title ? props.SubCategory.Title : ""}
                 </p>
                 <ParticleListEntity Divider = {PositiveParticleDivider} 
                                     Image = {PositiveParticleListAsset} 
@@ -35,9 +35,9 @@ const ReviewParticle = (props) => {
                 <ParticleListEntity Divider = {NegativeParticleDivider} 
                                     Image = {NegativeParticleListAsset} 
                                     List = {props.SubCategory.Cons}/>
-                <div className = "ReviewParticleImage">
+                 {props.SubCategory.Image ? <div className = "ReviewParticleImage">
                     <img className = "DynamicImage" src = {props.SubCategory.Image} alt="IMAGE NOT HERE" />
-                </div>
+                </div> : <div></div>}
             </div> 
         </div>
     );

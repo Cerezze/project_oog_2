@@ -36,7 +36,7 @@ const Header = (props) =>{
                 <Link to = "/"><img src = {Logo}/></Link>
             </div>
             <div className = "HeaderText">
-                    <strong>Software and Tech Reviews</strong>
+                    <strong>Cerezze' Portfolio Site</strong>
             </div>
         </div>
         <div className="headerRightPanel">

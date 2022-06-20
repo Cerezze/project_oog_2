@@ -13,8 +13,8 @@ const ReviewBodyDetailPage = (props) =>{
                         {props.DetailReview.Title}
                     </h1>
                 <div className = "OveralPanel">
-                    <p className = "OveralSummaryTitle">Overall Summary</p>
-                    <p className = "OveralSummaryBody">{props.DetailReview.overallBlurb}</p>
+                    <p className = "OveralSummaryTitle">Quote</p>
+                    <p className = "OveralSummaryBody">{props.DetailReview.overallBlurb ? props.DetailReview.overallBlurb : "- Not Written"}</p>
                 </div>
 
                 <ReviewContainer DetailReview = {props.DetailReview.DetailReview}/>

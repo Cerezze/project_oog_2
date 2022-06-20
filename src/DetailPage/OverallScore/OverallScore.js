@@ -6,8 +6,8 @@ const OverallScore = (props) => {
         <div >
             <div className = "OverallScore">
                 <div className = "OverallScoreText">
-                    <div className = "OverallScoreBlurb">{props.overallScore}</div>
-                    <div className = "OverallScoreRating">{props.score}</div>
+                    <div className = "OverallScoreBlurb">{props.overallScore ? props.overallScore: ""}</div>
+                    <div className = "OverallScoreRating">{props.score ? props.score: ""}</div>
                 </div>
             </div>
         </div>
