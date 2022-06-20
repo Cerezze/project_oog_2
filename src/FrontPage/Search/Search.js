@@ -13,8 +13,15 @@ const Search = (props) =>{
             value={props.term}
             onChange={props.Change}/>
         {props.term ? <ul className = "searchList">{ props.results.map(item =>{
+<<<<<<< HEAD
                 return(
                     <Link to = {`/detail-review/${"arr" + (item.id + 1)}/${item.id}`} key = {item.id}><li className = "searchListEle" >{item.title}</li></Link>
+=======
+                
+                    console.log(props.results.length < 1);
+                return(
+                    <Link to = {`/detail-review/${"arr" + (item.id + 1)}`} key = {item.id}><li className = "searchListEle" >{item.title}</li></Link>
+>>>>>>> 6db29705fa10ea78163f5bf1d59e42fa2a9fba6f
                 )
             })}
         </ul> : null}

@@ -12,6 +12,11 @@ const Header = (props) =>{
     const [HeaderOnclick, SetHeaderOnClick] = useState(false);
     
     useEffect(() => {
+<<<<<<< HEAD
+=======
+        console.log(props.GoingUp);
+        console.log(HeaderOnclick);
+>>>>>>> 6db29705fa10ea78163f5bf1d59e42fa2a9fba6f
         if(HeaderOnclick == true || props.refProp < 100){
 
             setHeaderIsVisible(0);
@@ -21,6 +26,10 @@ const Header = (props) =>{
     }, [props.GoingUp, HeaderOnclick, props.refProp]);
 
     const headerOnClickHandler = () => {
+<<<<<<< HEAD
+=======
+        console.log("cicked");
+>>>>>>> 6db29705fa10ea78163f5bf1d59e42fa2a9fba6f
         SetHeaderOnClick(prevState => !prevState);
     }
 
