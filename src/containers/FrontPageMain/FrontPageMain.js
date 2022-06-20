@@ -8,7 +8,7 @@ import {useState, useEffect} from 'react';
         const [searchTerm, setSearchTerm] = useState("");
         const [searchResults, setSearchResults] = useState([]);
         
-        let num = 4;
+        let num = props.loadedReviews.length;
           let arr = props.loadedReviews.map((i, index) =>{
                 num -= 1;
               return {
