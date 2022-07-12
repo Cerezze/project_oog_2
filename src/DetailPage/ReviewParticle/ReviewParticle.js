@@ -4,14 +4,18 @@ import NegativeParticleDivider from '../../Designs_and_Flow/basic_designs/Review
 import PositiveParticleDivider from '../../Designs_and_Flow/basic_designs/ReviewParticlePositiveDivider.png';
 import NegativeParticleListAsset from "../../Designs_and_Flow/basic_designs/ParticleListBulletPointYellow.png";
 import PositiveParticleListAsset from "../../Designs_and_Flow/basic_designs/ParticleListBulletPointRed.png";
+import PictureView from '../PictureView/PictureView';
 
 const ReviewParticle = (props) => {
-
     return(
         <div>
             <div className = "ReviewParticle">
                 {props.SubCategory.Image ? <div className = "ReviewParticleImage">
-                    <img className = "DynamicImage" src = {props.SubCategory.Image} alt="IMAGE NOT HERE" />
+                    <img 
+                        className = "DynamicImage" 
+                        src = {props.SubCategory.Image} 
+                        onClick={() => props.ImageBlowUp(props.SubCategory)} 
+                        alt="IMAGE NOT HERE"/>
                 </div> : <div></div>}
                  <div className = "ReviewParticleText">
                     <p className = "ParticleTitle">
@@ -23,6 +27,9 @@ const ReviewParticle = (props) => {
                     <ParticleListEntity Divider = {NegativeParticleDivider} 
                                         Image = {NegativeParticleListAsset} 
                                         List = {props.SubCategory.Cons}/>
+                    {props.imageToggle?<PictureView 
+                        picUrl = {props.picUrl}
+                        setImageToggle = {props.setImageToggle}/>: null}
                 </div>
             </div>
             <div className = "ReviewImageMobile">

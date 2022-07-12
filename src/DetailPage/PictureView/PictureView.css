@@ -1,0 +1,20 @@
+.bigImageMain{
+    border: 2px solid red;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: red;
+}
+
+.bigImageMain img{
+    max-width: 900px;
+}
+
+.bigImageMain button{
+    float: right;
+    background-color: yellow;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+}
